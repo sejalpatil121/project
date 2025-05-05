@@ -1,0 +1,67 @@
+📌 1. Add a New Book (POST)
+Method: POST
+
+URL: http://localhost:3000/api/books
+
+Body → Select raw → JSON:
+
+json
+Copy
+Edit
+{
+  "title": "The Alchemist",
+  "author": "Paulo Coelho",
+  "price": 299,
+  "genre": "Fiction"
+}
+Hit: "Send"
+
+Expected Result: Returns the added book with _id.
+
+📌 2. Retrieve All Books (GET)
+Method: GET
+
+URL: http://localhost:3000/api/books
+
+Hit: "Send"
+
+Expected Result: Returns an array of all book objects.
+
+📌 3. Update a Book (PUT)
+First, get the _id of a book from the GET response.
+
+Method: PUT
+
+URL: http://localhost:3000/api/books/<BOOK_ID>
+Replace <BOOK_ID> with the actual ID.
+
+Body → raw → JSON:
+
+json
+Copy
+Edit
+{
+  "price": 250,
+  "genre": "Philosophy"
+}
+Hit: "Send"
+
+Expected Result: Returns the updated book object.
+
+📌 4. Delete a Book (DELETE)
+Use the same _id you got earlier.
+
+Method: DELETE
+
+URL: http://localhost:3000/api/books/<BOOK_ID>
+
+Hit: "Send"
+
+Expected Result:
+
+json
+Copy
+Edit
+{
+  "message": "Book deleted successfully"
+}

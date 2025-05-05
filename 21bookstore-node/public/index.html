@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Bookstore</title>
+</head>
+<body>
+    <h2>Add New Book</h2>
+    <form action="/add" method="POST">
+        <input name="title" placeholder="Title" required>
+        <input name="author" placeholder="Author" required>
+        <input name="price" type="number" placeholder="Price" required>
+        <input name="genre" placeholder="Genre" required>
+        <button type="submit">Add</button>
+    </form>
+
+    <h2>All Books</h2>
+    <div id="bookList"></div>
+
+    <script>
+        async function loadBooks() {
+            const res = await fetch('/books');
+            const books = await res.json();
+            const list = document.getElementById('bookList');
+            list.innerHTML = '';
+            books.forEach(book => {
+                list.innerHTML += `
+                    <form action="/update/${book._id}" method="POST">
+                        <input name="title" value="${book.title}" required>
+                        <input name="author" value="${book.author}" required>
+                        <input name="price" type="number" value="${book.price}" required>
+                        <input name="genre" value="${book.genre}" required>
+                        <button type="submit">Update</button>
+                    </form>
+                    <form action="/delete/${book._id}?_method=DELETE" method="POST" style="display:inline;">
+                        <button type="submit">Delete</button>
+                    </form>
+                    <hr>
+                `;
+            });
+        }
+        loadBooks();
+    </script>
+</body>
+</html>
