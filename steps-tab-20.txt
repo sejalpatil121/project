@@ -1,0 +1,74 @@
+a. Country-wise Popular Product
+Drag Country to Rows
+
+Drag Description to Columns
+
+Drag Quantity to Size
+
+Click on Description → Right-click → Top N Filter
+Choose Top 1 by SUM(Quantity)
+(This gives the most sold product per country)
+
+Use a bar chart or heat map
+
+✅ Done!
+
+b. Bottom 10 Products Based on Total Sale
+Create a Calculated Field → Name it TotalSales
+Formula: Quantity * UnitPrice
+
+Drag Description to Rows
+
+Drag TotalSales to Columns
+
+Sort ascending (smallest to largest)
+
+Right-click Description → Filter → Top → By Field → Bottom 10
+
+✅ Done!
+
+c. Top 5 Purchase Orders
+Drag InvoiceNo to Rows
+
+Drag TotalSales (created earlier) to Columns
+
+Click Sort (Descending)
+
+Right-click InvoiceNo → Filter → Top → By Field → Top 5
+
+✅ Done!
+
+d. Most Popular Products Based on Sales
+Drag Description to Rows
+
+Drag TotalSales to Columns
+
+Click Sort (Descending)
+
+You can limit to top 10 or 20 if needed using filters
+
+✅ Done!
+
+e. Half-Yearly Sales for 2011
+Drag InvoiceDate to Filters → Select Years → Tick only 2011
+
+Drag InvoiceDate to Columns → Right-click → Choose Month
+
+Drag TotalSales to Rows
+
+Group the 6 months into two groups manually:
+
+Jan to Jun (H1)
+
+Jul to Dec (H2)
+
+Or: Create a Calculated Field:
+
+sql
+Copy
+Edit
+IF MONTH([InvoiceDate]) <= 6 THEN "H1" ELSE "H2" END
+Use this field on Columns, and TotalSales on Rows
+
+✅ Done!
+

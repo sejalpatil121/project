@@ -1,0 +1,99 @@
+✅ a. Find and Plot Income class of people whose education is Master’s and Doctorate
+Drag Education to Filters
+
+Select only Master’s and Doctorate → Click OK
+
+Drag Income to Columns
+
+Drag Age to Rows → Right-click Age → Select Measure > Count
+
+Done! You will now see income class distribution for highly educated people.
+
+✅ b. Find and Plot Income class of people who have private jobs
+Drag Workclass to Filters
+
+Select only Private → Click OK
+
+Drag Income to Columns
+
+Drag Age to Rows → Right-click Age → Select Measure > Count
+
+Done! This shows how many private workers earn >50K or <=50K.
+
+✅ c. Find and Plot Yearly Sales Comparison (Net Sales)
+Click the arrow next to Data → Select Create Calculated Field
+
+Name it Net Sales
+
+Formula:
+[Capital-Gain] - [Capital-Loss]
+
+Click OK
+
+Drag Net Sales to Rows
+
+Drag Income or Workclass to Columns
+
+Choose Bar chart from "Show Me"
+
+Done! You’ll see how net sales vary across groups.
+
+✅ d. Country-wise statistics on Geospatial graph
+Drag Native-Country to Detail on the Marks card
+
+Click the Map icon on the toolbar or select Map from "Show Me"
+
+Drag Age or Income to Color or Size for statistics
+
+Done! Map will show country-wise stats.
+
+✅ e. Plot Age-wise Education vs Salary statistics
+Drag Age to Columns
+
+Drag Education to Rows
+
+Drag Income to Color or Tooltip
+
+Use Circle or Heatmap from "Show Me"
+
+Done! You’ll see the trend of salary across ages and education levels.
+
+✅ f. Plot Country-wise Male-Female ratio
+Drag Native-Country to Columns
+
+Drag Gender to Rows
+
+Drag Gender again to Label or Color
+
+Right-click Gender in Rows → Select Measure > Count
+
+Choose Bar chart from "Show Me"
+
+Done! You’ll see how many males/females per country.
+
+✅ g. Plot Income class based on Workclass (Government and Other)
+Drag Workclass to Filters → Select:
+
+State-gov
+
+Federal-gov
+
+Local-gov
+
+Self-emp-not-inc
+
+Self-emp-inc
+
+Without-pay
+
+Never-worked
+
+Click OK
+
+Drag Workclass to Columns
+
+Drag Income to Color or Rows
+
+Drag Age to Rows → Right-click → Measure > Count
+
+Done! You’ll see income classes for government and other workers.

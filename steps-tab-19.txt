@@ -1,0 +1,60 @@
+✅ a. Top 10 Products Based on Total Sale
+Create a new calculated field → name it: TotalSales
+Formula: Quantity * UnitPrice
+
+Drag Description to Rows
+
+Drag TotalSales to Columns
+
+Sort Descending
+
+Filter top 10 → Right-click on Description → Filter → Top tab → Top 10 by TotalSales
+
+Use bar chart from "Show Me"
+
+✅ b. Product Contribution to Total Sale
+Use the TotalSales field from (a)
+
+Drag Description to Rows
+
+Drag TotalSales to Columns
+
+Right-click TotalSales in the view → Quick Table Calculation → Percent of Total
+
+Use a Pie Chart or Bar Chart
+
+✅ c. Month-wise Sales in 2010 (Descending Order)
+Drag InvoiceDate to Filters → Choose Year = 2010
+
+Drag InvoiceDate to Columns → Right-click → Select Month
+
+Drag TotalSales to Rows
+
+Sort the bars Descending
+
+✅ d. Most Loyal Customers Based on Purchase Orders
+Drag CustomerID to Rows
+
+Drag InvoiceNo to Columns → Right-click → Measure > Count (Distinct)
+
+Sort Descending
+
+Optional: Filter Top 10 (as in a)
+
+Loyalty = Customers with most invoices (frequent buyers)
+
+✅ e. Yearly Sales Comparison
+Drag InvoiceDate to Columns → Right-click → Select Year
+
+Drag TotalSales to Rows
+
+Use Bar Chart
+
+✅ f. Country-wise Total Sales (on Geospatial Map)
+Drag Country to Detail on Marks card
+
+Drag TotalSales to Color or Size
+
+From "Show Me", choose Map
+
+You’ll get a map showing sales distribution by country
